@@ -42,22 +42,23 @@ If any selected task is unclear or missing information, clarification must be re
 UI implementation must:
 - Follow the comprehensive staged implementation approach:
   1. **Basic Structure & Types Implementation**
-     - Review design specifications thoroughly before starting implementation
+     - Review the design JSON file thoroughly before starting implementation
      - Create all required TypeScript interfaces and types
      - Set up basic component structure and hierarchy with proper semantic HTML
      - Define loading and error state handling
      - Create component skeleton with appropriate HTML elements
      
   2. **Color & Typography Implementation**
-     - Follow the established design system color palette
-     - Use direct hex color values from the established palette for consistency
-     - Match font sizes, weights, line heights, and letter spacing per the typography hierarchy
-     - Implement text content exactly as specified (check singular/plural, capitalization)
+     - Check `tailwind.config.ts` for existing color tokens matching design
+     - Add any missing color tokens to `tailwind.config.ts` with proper naming
+     - Use semantic color tokens over direct hex values whenever possible
+     - Match font sizes, weights, line heights, and letter spacing precisely
+     - Implement text content exactly as shown in design (check singular/plural, capitalization)
      
   3. **Layout & Spacing Implementation**
-     - Match component dimensions, padding, margin, and gap values using the established grid system
-     - Use appropriate spacing units that correspond to the design specifications
-     - Implement exact column structure and order from specifications
+     - Match component dimensions, padding, margin, and gap values precisely
+     - Use Tailwind spacing units that correspond to design dimensions
+     - Implement exact column structure and order from design
      - Ensure element ordering and sequence numbers match design specification
      - Pay special attention to alignment of text and other elements
      
@@ -65,11 +66,11 @@ UI implementation must:
      - Add hover, focus, and active states for interactive elements
      - Implement conditional styling (e.g., positive/negative values)
      - Add animation and transition effects where specified
-     - Ensure responsive behavior works according to defined breakpoints
+     - Ensure responsive behavior works according to design specifications
      - Validate accessibility with proper ARIA attributes where needed
 
-- Compare final implementation against design specifications and requirements
-- Verify exact text content matches specifications (check for singular vs. plural forms, capitalization)
+- Compare final implementation against design JSON and visual documentation
+- Verify exact text content matches (check for singular vs. plural forms, capitalization)
 - Include comprehensive verification tables for all design elements
 
 ### Integration/Functionality Tasks
@@ -112,15 +113,15 @@ The implementation must:
 ```markdown
 ## Design Review Checklist
 
-### Design Specifications Review
-- ✅ Design specifications reviewed in detail
-- ✅ Visual requirements and documentation reviewed
-- ✅ Color palette references checked against project design system
-- ✅ Required styling approach identified
+### Design File Review
+- ✅ Design JSON file reviewed in detail: `/docs/design/[component-name]-design.json`
+- ✅ Visual documentation section reviewed
+- ✅ Theme token references checked against tailwind.config.ts
+- ✅ Missing color tokens identified for addition
 
 ### Design Understanding
 - ✅ Component structure and hierarchy understood
-- ✅ Component dimensions, spacing, and layout understood
+- ✅ Widget dimensions, spacing, and layout understood
 - ✅ Column structure and data presentation understood
 - ✅ Exact text content (including singular/plural forms) noted
 - ✅ Color usage and conditional styling rules understood
@@ -134,26 +135,26 @@ The implementation must:
 ### Selected Tasks Completion
 | Task | Description | Status | Notes |
 |------|-------------|--------|-------|
-| 1.1 | Create component structure | ✅ Complete | Structure follows design specifications |
-| 1.2 | Implement layout | ✅ Complete | Layout matches design with defined structure |
-| 1.3 | Apply styling | ✅ Complete | Applied established color palette and spacing |
+| 1.1 | Create component structure | ✅ Complete | Structure follows design JSON specifications |
+| 1.2 | Implement layout | ✅ Complete | Layout matches design with 4-column structure |
+| 1.3 | Add color tokens | ✅ Complete | Added missing color tokens to tailwind.config.ts |
 | 2.1 | Create TypeScript types | ✅ Complete | Added proper interfaces with optional properties |
-| 2.2 | Implement UI with exact content | ✅ Complete | Text matches specifications (title, headers) |
+| 2.2 | Implement UI with exact content | ✅ Complete | Text matches design (title, column headers) |
 | 2.3 | Add data fetching | ✅ Complete | Added error handling and retry logic |
 | 3.1 | Add loading state | ✅ Complete | Implemented skeleton loading UI |
 | 3.2 | Add error state | ✅ Complete | Added error message with retry option |
 | 3.3 | Add component tests | ✅ Complete | Tests for all states (loading, error, success) |
 
-### Component Specific Verification
+### Dashboard Widget Specific Verification
 | Aspect | Design Specification | Implementation | Status |
 |--------|---------------------|----------------|--------|
-| Component Title | As specified in requirements | Matches specification | ✅ Match |
-| Layout Structure | Per design requirements | Implemented correctly | ✅ Match |
-| Content Structure | As defined in specifications | Follows specification | ✅ Match |
-| Text Content | Exact content per specification | Matches exactly | ✅ Match | 
-| Formatting | Format per specification | Format matches | ✅ Match |
-| Conditional Styling | Per styling rules | Using established patterns | ✅ Match |
-| Component Dimensions | Matches requirements | Dimensions match | ✅ Match |
+| Widget Title | "Trending Stock" (singular) | "Trending Stock" | ✅ Match |
+| Card Design | rounded-[25px], p-6 | rounded-[25px], p-6 | ✅ Match |
+| Column Structure | 4 columns (SL No, Name, Price, Return) | 4 columns | ✅ Match |
+| Column Headers | "SL No", "Name", "Price", "Return" | Same as design | ✅ Match | 
+| Sequence Numbers | Format "01.", "02." etc. | Format matches | ✅ Match |
+| Conditional Styling | Green for positive, Red for negative | Using semantic colors | ✅ Match |
+| Widget Dimensions | Matches design JSON | Width/height match | ✅ Match |
 ```
 
 ### Design Verification (For UI Tasks)
@@ -163,50 +164,50 @@ The implementation must:
 
 #### Universal Design Review Process
 
-1. ✅ **Design Specifications Reviewed**: Requirements and specifications analyzed
-2. ✅ **Color System Applied** (following established palette)
-3. ✅ **Text Content Exactly Matches Specifications** (singular/plural, capitalization)
-4. ✅ **Component Structure Matches Requirements** (layout, ordering, hierarchy)
+1. ✅ **Design JSON File Reviewed**: `/docs/design/[component-name]-design.json`
+2. ✅ **Color Tokens Added to Tailwind Config** (if needed)
+3. ✅ **Text Content Exactly Matches Design** (singular/plural, capitalization)
+4. ✅ **Component Structure Matches Design** (columns, ordering, hierarchy)
 
 #### Color Verification
 | Element | Design Color | Implementation | Status |
 |---------|--------------|----------------|--------|
-| Primary Text | Per color palette | Using established colors | ✅ Match |
-| Secondary Text | Per color palette | Using established colors | ✅ Match |
-| Interactive Elements | Per color palette | Using established colors | ✅ Match |
-| Success States | Per color palette | Using established colors | ✅ Match |
-| Error States | Per color palette | Using established colors | ✅ Match |
-| Background | Per color palette | Using established colors | ✅ Match |
+| Header Text | #718EBF | text-blue-muted | ✅ Match |
+| Regular Text | #232323 | text-neutral-900 | ✅ Match |
+| Card Title | #333B69 | text-primary-dark | ✅ Match |
+| Positive Values | #16DBAA | text-success | ✅ Match |
+| Negative Values | #FE5C73 | text-danger | ✅ Match |
+| Background | #FFFFFF | bg-white | ✅ Match |
 
 #### Spacing Verification
 | Element | Design Value | Implementation | Status |
 |---------|--------------|----------------|--------|
-| Component Padding | Per grid system | Following grid system | ✅ Match |
-| Element Gaps | Per grid system | Following grid system | ✅ Match |
-| Layout Spacing | Per grid system | Following grid system | ✅ Match |
-| Border Radius | Per specifications | Matches requirements | ✅ Match |
+| Card Padding | 24px | p-6 (1.5rem = 24px) | ✅ Match |
+| Row Gap | 8px | gap-2 (0.5rem = 8px) | ✅ Match |
+| Column Gap | 32px | gap-8 (2rem = 32px) | ✅ Match |
+| Card Border Radius | 25px | rounded-[25px] | ✅ Match |
 
 #### Typography Verification
 | Element | Design Value | Implementation | Status |
 |---------|--------------|----------------|--------|
-| Headings | Per typography hierarchy | Following hierarchy | ✅ Match |
-| Body Text | Per typography hierarchy | Following hierarchy | ✅ Match |
-| Secondary Text | Per typography hierarchy | Following hierarchy | ✅ Match |
-| Line Height | Per specifications | Matches specifications | ✅ Match |
+| Card Title | 22px/600 | text-[22px] font-semibold | ✅ Match |
+| Table Header | 16px/500 | text-base font-medium | ✅ Match |
+| Table Content | 16px/400 | text-base font-normal | ✅ Match |
+| Line Height | 1.21 | leading-snug | ✅ Match |
 
 #### Structure Verification
-- ✅ Component hierarchy matches specification
+- ✅ Component hierarchy matches design spec
 - ✅ Layout structure implemented correctly (columns, grid, flex)
-- ✅ Element ordering and sequence matches specification
-- ✅ Responsive behavior implemented per defined breakpoints
+- ✅ Element ordering and sequence numbers match design
+- ✅ Responsive behavior implemented per design specs
 - ✅ Loading and error states implemented with appropriate styling
-- ✅ Data formatting matches requirements
+- ✅ Data formatting (currency, percentages) matches design
 
 #### Conditional Logic Verification
-- ✅ Conditional styling implemented (state-based styling)
+- ✅ Conditional styling implemented (positive/negative values, states)
 - ✅ Interactive elements have appropriate hover/focus states
-- ✅ Empty state handling matches specification
-- ✅ Edge cases handled according to requirements
+- ✅ Empty state handling matches design specification
+- ✅ Edge cases handled according to design guidelines
 ```
 
 ### Functionality Verification (For Integration Tasks)
