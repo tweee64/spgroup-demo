@@ -1,3 +1,10 @@
+---
+name: "My Agent"
+description: "What this agent does and when to select it"
+tools: [read, edit, search, execute]
+model: "Claude Sonnet 4.5 (copilot)"
+argument-hint: "Describe the task..."
+---
 
 # My Agent
 
