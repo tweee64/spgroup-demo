@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
+/* ─── Palo IT Brand Palette ─────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Teal scale (primary brand) */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #00ab9c;
+  --color-teal-600: #0a5d57;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+
+  /* Gray scale */
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #9ca3af;
+  --color-gray-600: #374151;
+  --color-gray-700: #1f2937;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  /* White */
+  --color-white: #ffffff;
+
+  /* ── Semantic tokens ── */
+  --primary: var(--color-teal-500);
+  --primary-hover: var(--color-teal-600);
+  --primary-light: var(--color-teal-100);
+  --primary-dark: var(--color-teal-800);
+
+  --surface: var(--color-white);
+  --surface-secondary: var(--color-gray-50);
+
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  --text-tertiary: var(--color-gray-500);
+  --text-inverse: var(--color-white);
+
+  --border: var(--color-gray-200);
+  --border-focus: var(--primary);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--surface-secondary);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
