@@ -1,0 +1,118 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "Breadcrumb" [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Home" [ref=e8] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e9]:
+          - img [ref=e10]
+          - link "Search" [ref=e12] [cursor=pointer]:
+            - /url: /search
+        - listitem [ref=e13]:
+          - img [ref=e14]
+          - generic [ref=e16]: Modern Studio near King's Cross
+    - generic [ref=e18]:
+      - generic [ref=e19] [cursor=pointer]:
+        - img "Modern Studio near King's Cross - Image 1" [ref=e20]
+        - generic [ref=e21]: 1 / 5
+        - button "View all photos" [ref=e22]:
+          - img [ref=e23]
+          - text: View all photos
+      - generic [ref=e26]:
+        - button "Thumbnail 1" [ref=e27]:
+          - img "Thumbnail 1" [ref=e28]
+        - button "Thumbnail 2" [ref=e29]:
+          - img "Thumbnail 2" [ref=e30]
+        - button "Thumbnail 3" [ref=e31]:
+          - img "Thumbnail 3" [ref=e32]
+        - button "Thumbnail 4" [ref=e33]:
+          - img "Thumbnail 4" [ref=e34]
+        - button "Thumbnail 5" [ref=e35]:
+          - img "Thumbnail 5" [ref=e36]
+    - generic [ref=e38]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: studio
+            - generic [ref=e44]: 25m²
+          - heading "Modern Studio near King's Cross" [level=1] [ref=e45]
+          - generic [ref=e46]:
+            - img [ref=e47]
+            - text: King's Cross, London N1 9AG
+        - generic [ref=e51]:
+          - generic [ref=e52]: £1,200
+          - generic [ref=e53]: / month
+        - generic [ref=e54]:
+          - heading "Description" [level=2] [ref=e55]
+          - paragraph [ref=e56]: A beautifully designed studio apartment in the heart of London, perfect for students and young professionals. Features include high-speed Wi-Fi, modern kitchen, and excellent transport links.
+        - generic [ref=e57]:
+          - heading "Amenities" [level=2] [ref=e58]
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - img [ref=e61]
+              - generic [ref=e63]: Wi-Fi
+            - generic [ref=e64]:
+              - img [ref=e65]
+              - generic [ref=e67]: Laundry
+            - generic [ref=e68]:
+              - img [ref=e69]
+              - generic [ref=e71]: Furnished
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - generic [ref=e75]: Air Conditioning
+        - generic [ref=e76]:
+          - heading "Lease Terms" [level=2] [ref=e77]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - generic [ref=e80]: "Minimum lease:"
+              - generic [ref=e81]: 3 months
+            - generic [ref=e82]:
+              - generic [ref=e83]: "Maximum lease:"
+              - generic [ref=e84]: 12 months
+            - generic [ref=e85]:
+              - generic [ref=e86]: "Availability:"
+              - generic [ref=e87]: Available now
+        - generic [ref=e88]:
+          - heading "About the Landlord" [level=2] [ref=e89]
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: S
+              - generic [ref=e93]:
+                - generic [ref=e94]: Sarah Johnson
+                - generic [ref=e95]: Member since 2020
+            - generic [ref=e96]:
+              - generic [ref=e97]: "Response rate:"
+              - generic [ref=e98]: 95%
+      - generic [ref=e101]:
+        - heading "Request Booking" [level=3] [ref=e102]
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]: Move-in Date
+            - textbox [ref=e106]
+          - generic [ref=e107]:
+            - generic [ref=e108]: Lease Duration
+            - combobox [ref=e109]:
+              - option "1 month"
+              - option "3 months" [selected]
+              - option "6 months"
+              - option "9 months"
+              - option "12 months"
+          - generic [ref=e110]:
+            - generic [ref=e111]: Message (optional)
+            - textbox "Introduce yourself or ask any questions..." [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: £1,200 × 3 months
+              - generic [ref=e116]: £3,600
+            - generic [ref=e118]:
+              - generic [ref=e119]: Total
+              - generic [ref=e120]: £3,600
+          - button "Request Booking" [ref=e121]
+          - button "Message Landlord" [ref=e122]
+        - paragraph [ref=e123]: You won't be charged yet. Payment is handled offline after confirmation.
+  - alert [ref=e124]
+```

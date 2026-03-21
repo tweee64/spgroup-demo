@@ -1,0 +1,92 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - heading "Search Accommodations" [level=1] [ref=e5]
+      - generic [ref=e6]:
+        - generic:
+          - img
+        - textbox "Search by title, description, or location..." [ref=e7]: Studio
+        - button [ref=e8]:
+          - img [ref=e9]
+    - generic [ref=e12]:
+      - generic [ref=e15]:
+        - heading "Filters" [level=2] [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e19]: Location
+          - textbox "City or area" [active] [ref=e20]: London
+        - generic [ref=e21]:
+          - generic [ref=e22]: Price Range (per month)
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - spinbutton [ref=e26]: "0"
+              - spinbutton [ref=e28]: "3000"
+            - generic [ref=e29]: £0 - £3,000
+        - generic [ref=e30]:
+          - generic [ref=e31]: Room Type
+          - generic [ref=e32]:
+            - generic [ref=e33] [cursor=pointer]:
+              - checkbox "Studio" [ref=e34]
+              - generic [ref=e35]: Studio
+            - generic [ref=e36] [cursor=pointer]:
+              - checkbox "Shared Apartment" [ref=e37]
+              - generic [ref=e38]: Shared Apartment
+            - generic [ref=e39] [cursor=pointer]:
+              - checkbox "Student Housing" [ref=e40]
+              - generic [ref=e41]: Student Housing
+            - generic [ref=e42] [cursor=pointer]:
+              - checkbox "Co-Living" [ref=e43]
+              - generic [ref=e44]: Co-Living
+        - generic [ref=e45]:
+          - generic [ref=e46]: Facilities
+          - generic [ref=e47]:
+            - generic [ref=e48] [cursor=pointer]:
+              - checkbox "Wi-Fi" [ref=e49]
+              - generic [ref=e50]: Wi-Fi
+            - generic [ref=e51] [cursor=pointer]:
+              - checkbox "Gym" [ref=e52]
+              - generic [ref=e53]: Gym
+            - generic [ref=e54] [cursor=pointer]:
+              - checkbox "Laundry" [ref=e55]
+              - generic [ref=e56]: Laundry
+            - generic [ref=e57] [cursor=pointer]:
+              - checkbox "Parking" [ref=e58]
+              - generic [ref=e59]: Parking
+            - generic [ref=e60] [cursor=pointer]:
+              - checkbox "Furnished" [ref=e61]
+              - generic [ref=e62]: Furnished
+            - generic [ref=e63] [cursor=pointer]:
+              - checkbox "Air Conditioning" [ref=e64]
+              - generic [ref=e65]: Air Conditioning
+            - generic [ref=e66] [cursor=pointer]:
+              - checkbox "Garden" [ref=e67]
+              - generic [ref=e68]: Garden
+            - generic [ref=e69] [cursor=pointer]:
+              - checkbox "Co-working Space" [ref=e70]
+              - generic [ref=e71]: Co-working Space
+        - button "Clear All Filters" [ref=e72]
+      - generic [ref=e73]:
+        - paragraph [ref=e75]: Showing 1 accommodation
+        - link "Modern Studio near King's Cross £1,200/mo Modern Studio near King's Cross King's Cross, London studio 25m² Wi-Fi Laundry Furnished +1 more" [ref=e77] [cursor=pointer]:
+          - /url: /listings/1
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - img "Modern Studio near King's Cross" [ref=e80]
+              - generic [ref=e82]: £1,200/mo
+            - generic [ref=e83]:
+              - heading "Modern Studio near King's Cross" [level=3] [ref=e84]
+              - generic [ref=e85]:
+                - img [ref=e86]
+                - text: King's Cross, London
+              - generic [ref=e89]:
+                - generic [ref=e90]: studio
+                - generic [ref=e91]: 25m²
+              - generic [ref=e92]:
+                - generic [ref=e93]: Wi-Fi
+                - generic [ref=e94]: Laundry
+                - generic [ref=e95]: Furnished
+                - generic [ref=e96]: +1 more
+  - alert [ref=e97]
+```
